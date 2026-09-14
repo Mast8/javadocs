@@ -1,7 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-
 package com.mycompany.grade;
 
 /**
@@ -30,11 +29,15 @@ class Student {
         }
         System.out.println("-----------------");
     }
-    
 }
-public class Grade {
+
+public class GradeP {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Student student1 = new Student("Alex", 85.5);
+        Student student2 = new Student("Jordan",52.0);
+        
+        student1.displaySummary();
+        student2.displaySummary();
     }
 }
