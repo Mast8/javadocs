@@ -22,12 +22,17 @@ class Student {
     public void displaySummary() {
         System.out.println("Student: "+ this.name);
         System.out.println("Score: "+ this.score);
-        if(hasPassed()){
-            System.out.println("Status : Passed");
-        }else {
-            System.out.println("Status : Failed");
-        }
+        System.out.println("🏅 Grade   : " + getLetterGrade());
+        System.out.println("📌 Status  : " + (hasPassed() ? "PASSED" : "FAILED"));
         System.out.println("-----------------");
+    }
+
+    public String getLetterGrade() {
+        if (score >= 90) return "A 🌟";
+        if (score >= 80) return "B 👍";
+        if (score >= 70) return "C ⚖️";
+        if (score >= 60) return "D ⚠️";
+        return "F 🔴";
     }
 }
 
