@@ -1,8 +1,8 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-package com.mycompany.grade;
-
+import java.io.PrintStream;
+import java.nio.charset.StandardCharsets;
 /**
  *
  * @author Mast
@@ -39,6 +39,7 @@ class Student {
 public class GradeP {
 
     public static void main(String[] args) {
+        System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
         Student student1 = new Student("Alex", 85.5);
         Student student2 = new Student("Jordan",52.0);
         
