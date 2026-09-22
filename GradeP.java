@@ -64,3 +64,27 @@ class Solution {
         return dp[amount] > amount ? -1 :dp[amount];
     }
 }
+
+class Solution {
+    public List<String> generateParenthesis(int n) {
+        List<String> res = new ArrayList<String>();
+        form(res, 0, 0, "", n);
+        return res;
+    }
+    
+    public void form(List<String> res, int left, int right, String s, int n) {
+        if (s.length() == n * 2) {
+            res.add(s);
+            return;
+        }
+        
+        if (left < n) {
+            form(res, left + 1, right, s + "(", n);
+        }
+        
+        if (right < left) {
+            form(res, left, right + 1, s + ")", n);
+        }
+    }
+    
+}
